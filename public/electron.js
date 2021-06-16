@@ -54,7 +54,8 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1050,
     height: 600,
-    title: "test",
+    title: "ionics",
+    icon: __dirname + "/icon.png",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       nodeIntegration: false,
@@ -72,8 +73,6 @@ function createWindow() {
 
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
